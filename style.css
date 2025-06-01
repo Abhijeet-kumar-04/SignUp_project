@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@keyframes squareRightDown {
+  0%   { top: 50px; left: 50px; transform: scale(1); }
+  25%  { top: 50px; left: calc(100% - 350px); transform: scale(1.1); }
+  50%  { top: calc(100% - 350px); left: calc(100% - 350px); transform: scale(1); }
+  75%  { top: calc(100% - 350px); left: 50px; transform: scale(1.1); }
+  100% { top: 50px; left: 50px; transform: scale(1); }
+}
+
+@keyframes squareLeftUp {
+  0%   { bottom: 50px; right: 50px; transform: scale(1); }
+  25%  { bottom: 50px; right: calc(100% - 350px); transform: scale(1.1); }
+  50%  { bottom: calc(100% - 350px); right: calc(100% - 350px); transform: scale(1); }
+  75%  { bottom: calc(100% - 350px); right: 50px; transform: scale(1.1); }
+  100% { bottom: 50px; right: 50px; transform: scale(1); }
+}
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: 0 0 40px rgba(173, 216, 230, 0.8),
+                0 0 80px rgba(173, 216, 230, 0.6),
+                0 0 120px rgba(173, 216, 230, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 60px rgba(173, 216, 230, 1),
+                0 0 100px rgba(173, 216, 230, 0.8),
+                0 0 140px rgba(173, 216, 230, 0.6);
+  }
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.outer-box {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to top left, #272626, #737372);
+    position: relative;
+}
+
+.innerbox {
+    width: 30vw;
+    background-color: rgb(84, 85, 87);
+    margin: 0 auto;
+    position: relative;
+    top: 40%;
+    transform: translateY(-50%);
+    border-radius: 15px;
+    border: 2px solid white;
+    padding: 20px;
+    box-shadow: 10px 10px 20px rgba(244, 241, 241, 0.5);
+}
+.headerbox h1{
+    font-weight: 800;
+    text-align: center;
+    margin: 10px 0;
+    color: white;
+    font-size: 2.6rem;
+    /* text-transform: uppercase; */
+    text-shadow: 5px 5px 5px rgba(4, 4, 4, 0.5);
+}
+.headerbox p {
+    text-align: center;
+    color: rgb(183, 209, 238);
+    font-size: 1.2rem;
+    margin: 20px 0;
+}
+.form p{
+    margin:10px 0;
+    font-size: 1.2rem;
+    display: block;
+    ;
+}
+.form p label{
+    display: block;
+    font-family: 'Inter', sans-serif;
+    /* background-color: #f9f9f9; */
+    /* color: #333; */
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    
+}
+.form p input{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    margin-top: 5px;
+}
+.form p input[type="submit"]{
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+.footer p{
+    text-align: center;
+    color: rgb(183, 209, 238);
+    font-size: 1.2rem;
+    margin-top: 20px;
+
+}
+.footer p a{
+    color: rgb(255, 255, 255);
+    
+    font-weight: 700;
+}
+.circle{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom right, #8fd1e679, #fafafa);
+    box-shadow: 12px 12px 20px rgba(0, 0, 0, 0.053);
+    text-shadow: 12px 12px 20px rgba(244, 241, 241, 0.053);
+    opacity: 0.5;
+    
+}
+.c1 {
+    width: 300px;
+    height: 300px;
+    animation: squareRightDown 8s ease-in-out infinite, glowPulse 2s ease-in-out infinite;
+    top: 50px;
+    left: 50px;
+}
+
+.c2 {
+    width: 300px;
+    height: 300px;
+    animation: squareLeftUp 8s ease-in-out infinite, glowPulse 2s ease-in-out infinite;
+    bottom: 50px;
+    right: 50px;
+}
+
+
